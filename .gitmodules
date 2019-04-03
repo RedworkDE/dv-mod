@@ -1,0 +1,6 @@
+[submodule "BepInEx/BepInEx"]
+	path = BepInEx/BepInEx
+	url = https://github.com/RedworkDE/BepInEx
+[submodule "BepInEx/BepInEx.UMMLoader"]
+	path = BepInEx/BepInEx.UMMLoader
+	url = https://github.com/BepInEx/BepInEx.UMMLoader

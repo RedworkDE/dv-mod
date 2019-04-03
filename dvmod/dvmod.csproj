@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <Authors>RedworkDE</Authors>
+    <Copyright>(c) 2019 RedworDE</Copyright>
+    <Platforms>AnyCPU</Platforms>
+    <OutputPath>..\bin</OutputPath>
+    <StartupObject></StartupObject>
+    <ApplicationIcon />
+    <Win32Resource />
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\libdvmod\bin\$(Configuration)\$(TargetFramework)\libdvmod.dll" Link="libdvmod.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\lib\doorstop_config.ini" Link="doorstop_config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\lib\winhttp.dll" Link="winhttp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\libdvmod\libdvmod.csproj" />
+  </ItemGroup>
+
+</Project>
